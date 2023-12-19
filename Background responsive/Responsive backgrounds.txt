@@ -1,0 +1,18 @@
+background-image: url();
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+
+/* no effect if background-attachment==fixed */
+/* these are their defaults */
+background-origin: padding-box; /* &-origin decides where the image starts */
+background-clip: border-box; /* &-clip decides where the image ends */
+
+background-attachment: fixed;
+
+height: ;
+
+
+(to add text to it, use display: flex or use positioning)
+
+

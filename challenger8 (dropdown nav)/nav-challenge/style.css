@@ -1,0 +1,338 @@
+/* Challenge
+
+   Make the navigation layout work
+   on both mobile and large screens.
+
+   Mobile-first, so mobile styles first,
+   then add the large screen styles
+   inside the existing media query
+
+*/
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "Roboto", sans-serif;
+	font-size: 1.3rem;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1 {
+	font-size: 3rem;
+	margin-top: 0;
+}
+
+.section-title {
+	color: #87629a;
+}
+
+.btn {
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #23424a;
+	font-weight: 900;
+	background-color: #38cfd9;
+	padding: 0.75em 2em;
+	border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+	opacity: 0.75;
+}
+
+.container {
+	width: 80%;
+	max-width: 1100px;
+	margin: 0 auto;
+	/* added for nav-toggle positioning */
+	position: relative;
+}
+
+header {
+	/* outline: 2px solid red; */
+	background: #136c72;
+	padding: 1em 0;
+	text-align: center;
+}
+
+.nav {
+	width: 100%;
+}
+
+.nav-toggle {
+	cursor: pointer;
+	border: 0;
+	width: 3em;
+	height: 3em;
+	padding: 0em;
+	border-radius: 50%;
+	background: #072a2d;
+	color: white;
+	transition: opacity 250ms ease;
+
+	position: absolute;
+	left: 0;
+}
+
+.nav-toggle:focus,
+.nav-toggle:hover {
+	opacity: 0.75;
+}
+
+.hamburger {
+	width: 50%;
+	position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+	display: block;
+	margin: 0 auto;
+	height: 3px;
+	background: white;
+}
+
+.hamburger::before,
+.hamburger::after {
+	content: "";
+	width: 100%;
+}
+
+.hamburger::before {
+	transform: translateY(-6px);
+}
+
+.hamburger::after {
+	transform: translateY(3px);
+}
+
+/* made changes here from video
+   to make it more accessible.
+   
+   Works the same :) */
+
+/* Nav class is made Nav--visible by JS */
+.nav {
+	/* outline: 2px solid rgb(41, 173, 70); */
+	visibility: hidden;
+	height: 0; /* this eventually affects the height of the nav for larger screen view */
+	margin: 1.5rem 0 0 0;
+	position: absolute;
+}
+
+.nav--visible {
+	/* outline: 2px solid orange; */
+	visibility: visible;
+	height: auto;
+	margin: 1.5rem 0 0 0;
+	position: relative;
+}
+
+.logo {
+	/* outline: 2px solid yellow; */
+	height: 30px;
+}
+
+.nav__list--primary {
+	margin: 0 0 4rem 0;
+}
+
+.nav__list {
+	/* outline: 2px solid brown; */
+	list-style: none;
+	padding: 0;
+}
+
+.nav__item {
+	/* outline: 2px solid black; */
+	margin: 0 0 1.5rem 0;
+}
+
+.nav__link {
+	/* outline: 2px solid blue; */
+	color: white;
+	text-decoration: none;
+	padding: 0 1rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 30px;
+}
+
+.nav__link--button {
+	color: #23424a;
+	background-color: white;
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	margin: 0.5rem 0 0 0;
+	border-radius: 30px;
+}
+
+.nav__link--button:hover,
+.nav__link:hover {
+	color: #23424a;
+	background-color: white;
+	opacity: 0.5;
+	border-radius: 30px;
+	padding: 0.5rem 1rem;
+}
+
+.nav__link--button:active {
+	color: #23424a;
+	background-color: black;
+	opacity: 0.5;
+	border-radius: 30px;
+	padding: 0.5rem 1rem;
+}
+
+.hero {
+	padding: 100px 0;
+	background-color: #23424a;
+	color: #fff;
+}
+
+.hero__img {
+	margin-top: 2em;
+}
+
+.hero p {
+	margin-bottom: 3em;
+}
+
+.main {
+	margin-top: 3em;
+}
+
+.sidebar {
+	padding: 1em;
+	text-align: center;
+	color: #fff;
+	background-color: #136c72;
+}
+
+/* For Larger Screen Sizes */
+@media (min-width: 800px) {
+	/* Header */
+	.nav-toggle {
+		display: none;
+	}
+
+	.header {
+		/* outline: 2px solid cyan; */
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: nowrap;
+	}
+
+	.logo {
+		/* outline: 2px solid yellow; */
+		text-align: center;
+		margin-right: 2rem;
+	}
+
+	.nav,
+	.nav__list,
+	.nav__link,
+	.nav__item {
+		padding: 0;
+		margin: 0;
+	}
+
+	.nav {
+		/* outline: 2px solid indigo; */
+		visibility: visible;
+		position: static;
+
+		flex-basis: 90%;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		height: auto;
+	}
+
+	.nav__list--primary {
+		/* outline: 2px solid skyblue; */
+		flex-basis: 50%;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.nav__list--secondary {
+		/* outline: 2px solid darkslateblue; */
+		flex-basis: 25%;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.nav__item {
+		white-space: nowrap;
+	}
+
+	.nav__link--button {
+		color: #23424a;
+		background-color: white;
+		padding: 0.1rem 0.3rem;
+		border-radius: 30px;
+		margin-left: 2rem;
+	}
+
+	.nav__link--button:hover,
+	.nav__link:hover {
+		color: #23424a;
+		background-color: white;
+		border-radius: 30px;
+		padding: 0.2rem 0.5rem;
+	}
+
+	.nav__link--button:active {
+		color: #23424a;
+		background-color: black;
+		border-radius: 30px;
+		padding: 0.2rem 0.5rem;
+	}
+
+	/* Main */
+	.row {
+		/* outline: 2px solid gold; */
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+	}
+
+	.hero__text {
+		width: 62%;
+	}
+
+	.hero__img {
+		width: 32%;
+		align-self: flex-start;
+		margin: 0;
+	}
+
+	.primary-content {
+		width: 62%;
+	}
+
+	.sidebar {
+		width: 32%;
+	}
+}

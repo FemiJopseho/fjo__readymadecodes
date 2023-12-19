@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Example on Using Maps</title>
+	</head>
+
+	<body>
+		<h1>Example on Using Maps</h1>
+
+		<div id="image_map">
+			<img
+				src="https://html.com/wp-content/uploads/image_map_example.jpg"
+				alt="image map example"
+				width="500"
+				height="332"
+				usemap="#map_example"
+			/>
+
+			<map name="map_example">
+				<area
+					href="https://facebook.com"
+					alt="Facebook"
+					target="_blank"
+					shape="poly"
+					coords="30,100, 140,50, 290,220, 180,280"
+				/>
+
+				<area
+					href="https://en.wikipedia.org/wiki/Social_media"
+					target="_blank"
+					alt="Wikipedia Social Media Article"
+					shape="poly"
+					coords="190,75, 200,60, 495,60, 495,165, 275,165"
+				/>
+			</map>
+		</div>
+	</body>
+</html>

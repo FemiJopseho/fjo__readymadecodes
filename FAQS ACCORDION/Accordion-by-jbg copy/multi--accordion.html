@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="multi--accordion.css" />
+
+		<!-- --------------JQUERY ACCESS via CDN and via Local server----------------- -->
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.min.js"
+			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			crossorigin="anonymous"
+		></script>
+
+		<script src="../js-components/jquery-3.7.1.min.js"></script>
+		<!-- --------------END of JQUERY ACCESS via CDN and via Local server----------------- -->
+		<title>Document</title>
+	</head>
+
+	<body>
+		<!-- Multi Parent-Accordions with Multi child-accordions -->
+		<section class="accordion-type-container-3">
+			<p class="accordion-type-title">
+				Multi Parent-Accordions with Multi child-accordions
+			</p>
+
+			<div>
+				<div class="parent-accordion">
+					<!-- PARENT--accordion-1 COMPANY -->
+					<div class="parent-accordion-item">
+						<button
+							class="parent-accordion__section-title"
+							id="parent-accordion-button-1"
+							aria-expanded="false"
+						>
+							<span class="parent-accordion-title">Company</span
+							><span class="icon" aria-hidden="true"></span>
+						</button>
+
+						<div class="parent-accordion-content">
+							<p class="parent-accordion-content-text">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+							</p>
+
+							<!-- Child Accordion -->
+							<div
+								class="child-accordion"
+								data-parent-id="parent-accordion-button-1"
+							>
+								<!-- Child Accordion Item 1 -->
+								<div class="child-accordion-item">
+									<button
+										class="child-accordion__section-title"
+										aria-expanded="false"
+									>
+										<span class="child-accordion-title"
+											>Why is the moon sometimes out during the day?</span
+										>
+										<span class="icon" aria-hidden="true"></span>
+									</button>
+
+									<div class="child-accordion-content">
+										<p class="child-accordion-content-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore et dolore magna
+											aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor
+											pretium viverra suspendisse potenti. Lorem ipsum dolor sit
+											amet consectetur adipisicing elit. Fugiat blanditiis nam
+											minima sit odio animi! Hic, vitae tempore molestiae
+											possimus voluptates laudantium optio illo cumque qui
+											similique voluptatibus aperiam earum!
+										</p>
+									</div>
+								</div>
+								<!-- End Child Accordion Item 1 -->
+
+								<!-- Child Accordion Item 2 -->
+								<div class="child-accordion-item">
+									<button
+										class="child-accordion__section-title"
+										aria-expanded="false"
+									>
+										<span class="child-accordion-title"
+											>Why is the sky blue?</span
+										>
+										<span class="icon" aria-hidden="true"></span>
+									</button>
+
+									<div class="child-accordion-content">
+										<p class="child-accordion-content-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore et dolore magna
+											aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor
+											pretium viverra suspendisse potenti.
+										</p>
+									</div>
+								</div>
+								<!-- End Child Accordion Item 2 -->
+
+								<!-- Child Accordion Item 3 -->
+								<div class="child-accordion-item">
+									<button
+										class="child-accordion__section-title"
+										aria-expanded="false"
+									>
+										<span class="child-accordion-title"
+											>How much does the Earth weigh?</span
+										>
+										<span class="icon" aria-hidden="true"></span>
+									</button>
+
+									<div class="child-accordion-content">
+										<p class="child-accordion-content-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore et dolore magna
+											aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor
+											pretium viverra suspendisse potenti.
+										</p>
+									</div>
+								</div>
+								<!-- End Child Accordion Item 3 -->
+
+								<!-- Child Accordion Item 4 -->
+								<div class="child-accordion-item">
+									<button
+										class="child-accordion__section-title"
+										aria-expanded="false"
+									>
+										<span class="child-accordion-title"
+											>How do airplanes stay up?</span
+										>
+										<span class="icon" aria-hidden="true"></span>
+									</button>
+
+									<div class="child-accordion-content">
+										<p class="child-accordion-content-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore et dolore magna
+											aliqua.
+										</p>
+									</div>
+								</div>
+								<!-- End Child Accordion Item 4 -->
+							</div>
+							<!-- End Child Accordion -->
+						</div>
+					</div>
+
+					<!-- Repeat the structure for other parent-accordion items -->
+					<!-- PARENT--accordion-2 SIGNAL APP -->
+					<div class="parent-accordion-item">
+						<button
+							class="parent-accordion__section-title"
+							id="parent-accordion-button-2"
+							aria-expanded="false"
+						>
+							<span class="parent-accordion-title">Signal App</span
+							><span class="icon" aria-hidden="true"></span>
+						</button>
+
+						<div class="parent-accordion-content">
+							<p class="parent-accordion-content-text">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+								eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							</p>
+
+							<!-- Child Accordion -->
+							<div
+								class="child-accordion"
+								data-parent-id="parent-accordion-button-2"
+							>
+								<!-- Child Accordion Item 1 -->
+								<div class="child-accordion-item">
+									<button
+										class="child-accordion__section-title"
+										aria-expanded="false"
+									>
+										<span class="child-accordion-title"
+											>Why is the moon sometimes out during the day?</span
+										>
+										<span class="icon" aria-hidden="true"></span>
+									</button>
+
+									<div class="child-accordion-content">
+										<p class="child-accordion-content-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore et dolore magna
+											aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor
+											pretium viverra suspendisse potenti. Lorem ipsum dolor sit
+											amet consectetur adipisicing elit. Fugiat blanditiis nam
+											minima sit odio animi! Hic, vitae tempore molestiae
+											possimus voluptates laudantium optio illo cumque qui
+											similique voluptatibus aperiam earum!
+										</p>
+									</div>
+								</div>
+								<!-- End Child Accordion Item 1 -->
+
+								<!-- Child Accordion Item 2 -->
+								<div class="child-accordion-item">
+									<button
+										class="child-accordion__section-title"
+										aria-expanded="false"
+									>
+										<span class="child-accordion-title"
+											>Why is the sky blue?</span
+										>
+										<span class="icon" aria-hidden="true"></span>
+									</button>
+
+									<div class="child-accordion-content">
+										<p class="child-accordion-content-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore et dolore magna
+											aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor
+											pretium viverra suspendisse potenti.
+										</p>
+									</div>
+								</div>
+								<!-- End Child Accordion Item 2 -->
+
+								<!-- Child Accordion Item 3 -->
+								<div class="child-accordion-item">
+									<button
+										class="child-accordion__section-title"
+										aria-expanded="false"
+									>
+										<span class="child-accordion-title"
+											>How much does the Earth weigh?</span
+										>
+										<span class="icon" aria-hidden="true"></span>
+									</button>
+
+									<div class="child-accordion-content">
+										<p class="child-accordion-content-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore et dolore magna
+											aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor
+											pretium viverra suspendisse potenti.
+										</p>
+									</div>
+								</div>
+								<!-- End Child Accordion Item 3 -->
+
+								<!-- Child Accordion Item 4 -->
+								<div class="child-accordion-item">
+									<button
+										class="child-accordion__section-title"
+										aria-expanded="false"
+									>
+										<span class="child-accordion-title"
+											>How do airplanes stay up?</span
+										>
+										<span class="icon" aria-hidden="true"></span>
+									</button>
+
+									<div class="child-accordion-content">
+										<p class="child-accordion-content-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore et dolore magna
+											aliqua.
+										</p>
+									</div>
+								</div>
+								<!-- End Child Accordion Item 4 -->
+							</div>
+							<!-- End Child Accordion -->
+						</div>
+					</div>
+
+					<!-- Repeat the structure for other parent-accordion items -->
+					<!-- PARENT--accordion-3 IAS -->
+					<div class="parent-accordion-item">
+						<button
+							class="parent-accordion__section-title"
+							id="parent-accordion-button-3"
+							aria-expanded="false"
+						>
+							<span class="parent-accordion-title"
+								>Investment Analytics Software (IAS)</span
+							><span class="icon" aria-hidden="true"></span>
+						</button>
+
+						<div class="parent-accordion-content">
+							<p class="parent-accordion-content-text">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+								eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							</p>
+
+							<!-- Child Accordion -->
+							<div
+								class="child-accordion"
+								data-parent-id="parent-accordion-button-3"
+							>
+								<!-- Child Accordion Item 1 -->
+								<div class="child-accordion-item">
+									<button
+										class="child-accordion__section-title"
+										aria-expanded="false"
+									>
+										<span class="child-accordion-title"
+											>Why is the moon sometimes out during the day?</span
+										>
+										<span class="icon" aria-hidden="true"></span>
+									</button>
+
+									<div class="child-accordion-content">
+										<p class="child-accordion-content-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore et dolore magna
+											aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor
+											pretium viverra suspendisse potenti. Lorem ipsum dolor sit
+											amet consectetur adipisicing elit. Fugiat blanditiis nam
+											minima sit odio animi! Hic, vitae tempore molestiae
+											possimus voluptates laudantium optio illo cumque qui
+											similique voluptatibus aperiam earum!
+										</p>
+									</div>
+								</div>
+								<!-- End Child Accordion Item 1 -->
+
+								<!-- Child Accordion Item 2 -->
+								<div class="child-accordion-item">
+									<button
+										class="child-accordion__section-title"
+										aria-expanded="false"
+									>
+										<span class="child-accordion-title"
+											>Why is the sky blue?</span
+										>
+										<span class="icon" aria-hidden="true"></span>
+									</button>
+
+									<div class="child-accordion-content">
+										<p class="child-accordion-content-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore et dolore magna
+											aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor
+											pretium viverra suspendisse potenti.
+										</p>
+									</div>
+								</div>
+								<!-- End Child Accordion Item 2 -->
+
+								<!-- Child Accordion Item 3 -->
+								<div class="child-accordion-item">
+									<button
+										class="child-accordion__section-title"
+										aria-expanded="false"
+									>
+										<span class="child-accordion-title"
+											>How much does the Earth weigh?</span
+										>
+										<span class="icon" aria-hidden="true"></span>
+									</button>
+
+									<div class="child-accordion-content">
+										<p class="child-accordion-content-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore et dolore magna
+											aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor
+											pretium viverra suspendisse potenti.
+										</p>
+									</div>
+								</div>
+								<!-- End Child Accordion Item 3 -->
+
+								<!-- Child Accordion Item 4 -->
+								<div class="child-accordion-item">
+									<button
+										class="child-accordion__section-title"
+										aria-expanded="false"
+									>
+										<span class="child-accordion-title"
+											>How do airplanes stay up?</span
+										>
+										<span class="icon" aria-hidden="true"></span>
+									</button>
+
+									<div class="child-accordion-content">
+										<p class="child-accordion-content-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore et dolore magna
+											aliqua.
+										</p>
+									</div>
+								</div>
+								<!-- End Child Accordion Item 4 -->
+							</div>
+							<!-- End Child Accordion -->
+						</div>
+					</div>
+
+					<!-- Repeat the structure for other parent-accordion items -->
+					<!-- PARENT--accordion-4 PRIVATE INVESTMENT -->
+					<div class="parent-accordion-item">
+						<button
+							class="parent-accordion__section-title"
+							id="parent-accordion-button-4"
+							aria-expanded="false"
+						>
+							<span class="parent-accordion-title">Private Investment</span
+							><span class="icon" aria-hidden="true"></span>
+						</button>
+
+						<div class="parent-accordion-content">
+							<p class="parent-accordion-content-text">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+								eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							</p>
+
+							<!-- Child Accordion -->
+							<div
+								class="child-accordion"
+								data-parent-id="parent-accordion-button-4"
+							>
+								<!-- Child Accordion Item 1 -->
+								<div class="child-accordion-item">
+									<button
+										class="child-accordion__section-title"
+										aria-expanded="false"
+									>
+										<span class="child-accordion-title"
+											>Why is the moon sometimes out during the day?</span
+										>
+										<span class="icon" aria-hidden="true"></span>
+									</button>
+
+									<div class="child-accordion-content">
+										<p class="child-accordion-content-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore et dolore magna
+											aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor
+											pretium viverra suspendisse potenti. Lorem ipsum dolor sit
+											amet consectetur adipisicing elit. Fugiat blanditiis nam
+											minima sit odio animi! Hic, vitae tempore molestiae
+											possimus voluptates laudantium optio illo cumque qui
+											similique voluptatibus aperiam earum!
+										</p>
+									</div>
+								</div>
+								<!-- End Child Accordion Item 1 -->
+
+								<!-- Child Accordion Item 2 -->
+								<div class="child-accordion-item">
+									<button
+										class="child-accordion__section-title"
+										aria-expanded="false"
+									>
+										<span class="child-accordion-title"
+											>Why is the sky blue?</span
+										>
+										<span class="icon" aria-hidden="true"></span>
+									</button>
+
+									<div class="child-accordion-content">
+										<p class="child-accordion-content-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore et dolore magna
+											aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor
+											pretium viverra suspendisse potenti.
+										</p>
+									</div>
+								</div>
+								<!-- End Child Accordion Item 2 -->
+
+								<!-- Child Accordion Item 3 -->
+								<div class="child-accordion-item">
+									<button
+										class="child-accordion__section-title"
+										aria-expanded="false"
+									>
+										<span class="child-accordion-title"
+											>How much does the Earth weigh?</span
+										>
+										<span class="icon" aria-hidden="true"></span>
+									</button>
+
+									<div class="child-accordion-content">
+										<p class="child-accordion-content-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore et dolore magna
+											aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor
+											pretium viverra suspendisse potenti.
+										</p>
+									</div>
+								</div>
+								<!-- End Child Accordion Item 3 -->
+
+								<!-- Child Accordion Item 4 -->
+								<div class="child-accordion-item">
+									<button
+										class="child-accordion__section-title"
+										aria-expanded="false"
+									>
+										<span class="child-accordion-title"
+											>How do airplanes stay up?</span
+										>
+										<span class="icon" aria-hidden="true"></span>
+									</button>
+
+									<div class="child-accordion-content">
+										<p class="child-accordion-content-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+											sed do eiusmod tempor incididunt ut labore et dolore magna
+											aliqua.
+										</p>
+									</div>
+								</div>
+								<!-- End Child Accordion Item 4 -->
+							</div>
+							<!-- End Child Accordion -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script src="multi--accordion.js"></script>
+		<script src="accordion-smooth-scroll-into-view.js"></script>
+	</body>
+</html>

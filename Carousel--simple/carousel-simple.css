@@ -1,0 +1,81 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: sans-serif;
+	line-height: 1.4;
+	margin: 0;
+}
+
+.carousel-wrapper {
+	background-color: #c0e699;
+	width: 50vw;
+	margin: 2rem auto 1rem auto;
+
+	/* overflow: hidden; */
+}
+
+.carousel {
+	outline: 2px solid red;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+
+	width: 100%;
+
+	/** to prevent situation where empty space shows when previous
+   is clicked, push "carousel" to the left, so that there 
+   is always content even when previous is clicked */
+	margin-left: calc(
+		2 * (50vw / 2 - (50vw * 0.42 + 2 * 8px)) + 50vw / -2 +
+			(50vw * 0.42 + 2 * 8px) / -1
+	);
+
+	transition: margin-left 600ms ease-in-out;
+}
+.carousel.noanimate {
+	transition: margin-left 0ms ease-in-out;
+}
+
+.slide {
+	font-size: 3.125rem;
+	font-weight: 700;
+	color: #111;
+	background-color: #437313;
+
+	text-align: center;
+	margin: 1rem 0.5rem;
+	padding: 3.75rem 0;
+
+	/** This means the item:
+   won't grow (flex-grow: 0), 
+   won't shrink (flex-shrink: 0), 
+   initial size is set to 42% of the container's size. 
+   Essentially, it will be a fixed size based on the percentage of the container width. */
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-basis: 42%;
+
+	max-width: 42%;
+}
+
+.carousel-nav {
+	margin: 0 auto 1rem;
+	width: 50vw;
+
+	display: flex;
+	justify-content: space-between;
+}
+
+p {
+	margin: 1.125rem auto;
+	width: 50vw;
+}

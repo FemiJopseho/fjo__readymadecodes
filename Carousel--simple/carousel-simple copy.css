@@ -1,0 +1,90 @@
+/* this contains same css but with additional "webkit" codes */
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: sans-serif;
+	line-height: 1.4;
+	margin: 0;
+}
+
+.carousel-wrapper {
+	background-color: #c0e699;
+	margin: 2rem auto 1rem;
+	width: 50vw;
+}
+
+.carousel {
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-transition: margin-left 600ms ease-in-out;
+	-moz-transition: margin-left 600ms ease-in-out;
+	transition: margin-left 600ms ease-in-out;
+	width: 100%;
+	margin-left: calc(
+		2 * (50vw / 2 - (50vw * 0.42 + 2 * 8px)) + 50vw / -2 +
+			(50vw * 0.42 + 2 * 8px) / -1
+	);
+}
+.carousel.noanimate {
+	-webkit-transition: margin-left 0ms ease-in-out;
+	-moz-transition: margin-left 0ms ease-in-out;
+	transition: margin-left 0ms ease-in-out;
+}
+
+.slide {
+	font-size: 3.125rem;
+	font-weight: 700;
+	text-align: center;
+	background: #437313;
+	margin: 1rem 0.5rem;
+	padding: 3.75rem 0;
+	-webkit-box-flex: 0;
+	-moz-box-flex: 0;
+	box-flex: 0;
+	-webkit-flex: 0 0 42%;
+	-moz-flex: 0 0 42%;
+	-ms-flex: 0 0 42%;
+	flex: 0 0 42%;
+	max-width: 42%;
+	color: #111;
+}
+
+.carousel-nav {
+	margin: 0 auto 1rem;
+	width: 50vw;
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-moz-box-pack: justify;
+	box-pack: justify;
+	-webkit-justify-content: space-between;
+	-moz-justify-content: space-between;
+	-ms-justify-content: space-between;
+	-o-justify-content: space-between;
+	justify-content: space-between;
+	-ms-flex-pack: justify;
+}
+
+p {
+	margin: 1.125rem auto;
+	width: 50vw;
+}

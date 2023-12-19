@@ -1,0 +1,93 @@
+this is what you should do:
+1. write the Javascript that will add the "on-scroll"  class to the header when the webpage is scrolled.
+
+=========================================================
+html:
+=========
+			<header class="header" id="header">
+				<nav class="nav-1__container">
+					<div class="nav-1__brand-logo__container">
+						<a href="#" class="nav-1__brand-logo__link">
+							<img
+								class="nav-1__brand-logo__image"
+								src="../../images/QG_LOGO_small-horizontal.jpg"
+								alt="Questergate Logo"
+							/>
+						</a>
+					</div>
+				</nav>
+
+				<nav class="nav-2__container">
+					<div class="ias__container">
+						<p class="ias__text">IAS</p>
+					</div>
+				</nav>
+			</header>
+=============================================================
+css:
+=========
+	.header {
+		width: 100%;
+
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+
+		/* //////////////// */
+		/* this hides nav-2 at first on page load */
+		.nav-2__container {
+			display: none;
+			visibility: hidden;
+		}
+	}
+
+	/* when you scroll down, the header changes */
+	.header.on-scroll {
+		.nav-1__container {
+			display: none;
+			visibility: hidden;
+		}
+
+		.nav-2__container {
+			display: block;
+			visibility: visible;
+		}
+	}
+
+
+========================================
+this is the JAVASCRIPT that adds the class:
+===============
+
+// Function to add the "on-scroll" class to the header
+function addOnScrollClass() {
+  const header = document.getElementById("header");
+
+  // Check if the header is in the viewport
+  const headerRect = header.getBoundingClientRect();
+  if (headerRect.top < 0) {
+    header.classList.add("on-scroll");
+  } else {
+    header.classList.remove("on-scroll");
+  }
+}
+
+// Attach the addOnScrollClass function to the scroll event
+window.addEventListener("scroll", addOnScrollClass);
+
+
+=======================================
+explanation for the javascirp steps:
+In this code:
+
+1.
+We define a function called addOnScrollClass that checks if the header is in the viewport. If the top of the header is above the viewport (i.e., it's scrolled out of view), we add the "on-scroll" class to the header element. Otherwise, we remove the class.
+
+2.
+We use window.addEventListener("scroll", addOnScrollClass) to listen for the scroll event on the window. When the user scrolls the webpage, the addOnScrollClass function is called, and it adds or removes the "on-scroll" class accordingly.
+
+3.
+Make sure to place this JavaScript code in a <script> tag at the end of your HTML file or in an external JavaScript file and link it to your HTML document for it to work.
+==================================================

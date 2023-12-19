@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="dropdown-hover-2.css">
+		<title>DROPDOWN (HOVER)</title>
+	</head>
+	<body>
+		<ul class="main-navigation">
+			<li><a href="#">Home</a></li>
+			<li>
+				<a href="#">Front End Design</a>
+				<ul>
+					<li><a href="#">HTML</a></li>
+					<li>
+						<a href="#">CSS</a>
+						<ul>
+							<li><a href="#">Resets</a></li>
+							<li><a href="#">Grids</a></li>
+							<li><a href="#">Frameworks</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">JavaScript</a>
+						<ul>
+							<li><a href="#">Ajax</a></li>
+							<li><a href="#">jQuery</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">WordPress Development</a>
+				<ul>
+					<li><a href="#">Themes</a></li>
+					<li><a href="#">Plugins</a></li>
+					<li>
+						<a href="#">Custom Post Types</a>
+						<ul>
+							<li><a href="#">Portfolios</a></li>
+							<li><a href="#">Testimonials</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Options</a></li>
+				</ul>
+			</li>
+			<li><a href="#">About Us</a></li>
+		</ul>
+		<h2>How it works</h2>
+		<hr />
+		<pre>
+  ul li {
+    display: block;
+    position: relative;
+    float: left;
+    background: #1bc2a2;
+  }
+  </pre
+		>
+		<p>
+			Using relative positioning for the parent li allows it to be used as a
+			container for absolutely positioned child elements.
+		</p>
+		<hr />
+		<pre>
+  li ul {
+    display: none; 
+  }
+  </pre
+		>
+		<p>This hides the dropdown menus until hovering over a parent li.</p>
+		<hr />
+		<pre>
+  li:hover > ul {
+    display: block; 
+    position: absolute;
+  }
+  </pre
+		>
+		<p>
+			This displays the dropdown ul when hovering over a parent li, using
+			<code>li:hover ul</code> for the selector without the <code>></code> child
+			combinator selector will work for single level dropdowns.
+		</p>
+		<hr />
+		<pre>
+  ul ul ul {
+      left: 100%;
+      top: 0;
+  }
+  </pre
+		>
+		<p>
+			Poisitions the second level dropdowns to the right of the first level
+			dropdown.
+		</p>
+	</body>
+</html>

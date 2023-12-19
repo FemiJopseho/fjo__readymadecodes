@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Counting Numbers on Hover</title>
+		<style>
+			.counter {
+				font-size: 36px;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="counter" id="counter">0</div>
+
+		<script>
+			// Function to count from 0 to 1000
+			function countTo1000() {
+				const counterElement = document.getElementById("counter");
+				const targetNumber = 1000;
+				const finalText = "1K+";
+				const duration = 2000; // 2 seconds
+				const increment = Math.ceil(targetNumber / (duration / 16)); // Update every 16ms for smooth animation
+
+				let currentNumber = 0;
+				const updateCounter = () => {
+					currentNumber += increment;
+					if (currentNumber >= targetNumber) {
+						currentNumber = targetNumber;
+						counterElement.textContent = finalText;
+					}
+					
+					else {
+						counterElement.textContent = currentNumber;
+						requestAnimationFrame(updateCounter);
+					}
+				};
+
+				updateCounter();
+			}
+
+			// Start counting when the element is hovered
+			const counterElement = document.getElementById("counter");
+			counterElement.addEventListener("mouseover", countTo1000);
+		</script>
+	</body>
+</html>

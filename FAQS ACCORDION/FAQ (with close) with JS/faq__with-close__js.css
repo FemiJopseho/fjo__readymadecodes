@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css?family=Hind:300,400&display=swap");
+* {
+	box-sizing: border-box;
+}
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Hind", sans-serif;
+	background: #fff;
+	color: #4d5974;
+	display: flex;
+	min-height: 100vh;
+}
+
+.container {
+	/* outline: 2px solid purple; */
+
+	margin: 0 auto;
+	padding: 4rem;
+	width: 48rem;
+}
+
+/** style the box housing the entire accordion title + content */
+.accordion .accordion-item {
+	/* outline: 2px solid black; */
+
+	border-bottom: 1px solid #e5e5e5;
+}
+
+/** to style accordion Title within the button */
+.accordion button .accordion-title {
+	/* outline: 2px solid yellow; */
+
+	padding: 1em 1.5em 1em 0;
+}
+
+/** styling the always visible part of the accordion */
+.accordion button {
+	position: relative;
+
+	display: block;
+	text-align: left;
+	width: 100%;
+	padding: 1em 0;
+	color: #7288a2;
+	font-size: 1.15rem;
+	font-weight: 400;
+	border: none;
+	background: none;
+	outline: none;
+	/* outline: 2px solid brown; */
+
+	/* ////////////// */
+	&:hover,
+	&:focus {
+		cursor: pointer;
+		color: #03b5d2;
+	}
+
+	/* not sure what this does. i dont think it is needed */
+	/* /////////////// */
+	&:hover::after,
+	&:focus::after {
+		outline: 2px solid magenta;
+
+		cursor: pointer;
+		color: #03b5d2;
+		border: 1px solid #03b5d2;
+	}
+}
+
+/** to create accordion Circle icon on the far right of title */
+.accordion button .icon {
+	/* outline: 2px solid red; */
+
+	display: inline-block;
+	position: absolute;
+	top: 18px;
+	right: 0;
+	width: 22px;
+	height: 22px;
+	border: 1px solid;
+	border-radius: 22px;
+}
+
+/** WHEN CLOSED: to draw + inside accordion icon */
+.accordion button .icon::before {
+	/* outline: 2px solid green; */
+
+	display: block;
+	position: absolute;
+	content: "";
+	top: 9px;
+	left: 5px;
+	width: 10px;
+	height: 2px;
+	background: currentColor;
+}
+.accordion button .icon::after {
+	/* outline: 2px solid pink; */
+
+	display: block;
+	position: absolute;
+	content: "";
+	top: 5px;
+	left: 9px;
+	width: 2px;
+	height: 10px;
+	background: currentColor;
+}
+
+/** WHEN OPENED: draws a hor line below accordion button */
+.accordion button[aria-expanded="true"] {
+	border-bottom: 1px solid #03b5d2;
+}
+
+/** WHEN OPENED: color of the Button Title & +/- icon */
+.accordion button[aria-expanded="true"] {
+	color: #03b5d2;
+}
+
+/**WHEN OPENED: converts the + to - inside the icon */
+.accordion button[aria-expanded="true"] .icon::after {
+	width: 0;
+}
+
+/** WHEN CLOSED: styles the FAQ answer texts */
+.accordion .accordion-content p {
+	font-size: 1rem;
+	font-weight: 300;
+	margin: 2em 0;
+}
+
+/** WHEN CLOSED: this makes sure the FAQ answer does not show by default */
+.accordion .accordion-content {
+	/* outline: 2px solid red; */
+
+	opacity: 0;
+	max-height: 0;
+	overflow: hidden; /* not sure what these does */
+	transition: opacity 200ms linear, max-height 200ms linear;
+	will-change: opacity, max-height;
+}
+
+/** WHEN OPENED: Behaviour of the box housing the FAQ answer */
+.accordion button[aria-expanded="true"] + .accordion-content {
+	/* outline: 2px solid red; */
+
+	opacity: 1;
+	max-height: 9em;
+	transition: all 200ms linear;
+	will-change: opacity, max-height;
+}

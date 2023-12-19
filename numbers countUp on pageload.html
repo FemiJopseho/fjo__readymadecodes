@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Counting Numbers</title>
+
+		<style>
+			.counter {
+				display: block;
+				font-size: 36px;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="counter" id="counter">0</div>
+
+		<script>
+			// Function to count from 0 to 1000
+			function countTo1000() {
+				const counterElement = document.getElementById("counter");
+				const targetNumber = 1000;
+				const finalText = "1K+";
+				const duration = 500; // 0.5 seconds
+				const increment = Math.ceil(targetNumber / (duration / 16)); // Update every 16ms for smooth animation
+
+				let currentNumber = 0;
+				const updateCounter = () => {
+					currentNumber += increment;
+
+					if (currentNumber >= targetNumber) {
+						currentNumber = targetNumber;
+						counterElement.textContent = finalText;
+					} else {
+						counterElement.textContent = currentNumber;
+						requestAnimationFrame(updateCounter);
+					}
+
+					// if (currentNumber >= targetNumber) {
+					// 	currentNumber = targetNumber;
+					// }
+					// counterElement.textContent = currentNumber;
+
+					// if (currentNumber < targetNumber) {
+					// 	requestAnimationFrame(updateCounter);
+					// }
+				};
+
+				updateCounter();
+			}
+
+			// Start counting when the page loads
+			window.addEventListener("load", countTo1000);
+		</script>
+	</body>
+</html>

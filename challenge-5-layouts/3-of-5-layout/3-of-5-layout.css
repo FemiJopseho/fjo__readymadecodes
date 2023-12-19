@@ -1,0 +1,131 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* * {
+    outline: 3px solid black;
+} */
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 21px;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+		sans-serif;
+	background-color: ghostwhite;
+}
+
+.main {
+	outline: 3px solid gold;
+}
+
+/* DESKTOP */
+@media screen and (min-width: 426px) {
+	.main {
+		margin: 0.5rem auto;
+		padding: 1rem;
+		width: 95%;
+		/* height: 95%; */
+		background-color: powderblue;
+	}
+
+	.main_display {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.sidebar {
+		outline: 3px solid indianred;
+		width: 33%;
+		border-radius: 7px 0 0 7px;
+		padding: 1rem;
+	}
+
+	.content_bar {
+		outline: 3px solid blueviolet;
+		width: 64%;
+		border-radius: 0 7px 7px 0;
+		padding: 1rem;
+	}
+
+	.sidebar div,
+	.content_bar div {
+		/* outline: 3px solid black; */
+		border-radius: 7px;
+		height: 29rem;
+	}
+
+	.sidebar div {
+		/* centering the text within div */
+		text-align: center;
+		line-height: 29rem;
+	}
+
+	.content_bar div {
+		/* centering the text within div */
+		text-align: center;
+		padding: 50% 0;
+	}
+}
+
+/* MOBILE SCREEN SIZE */
+@media screen and (max-width: 425px) {
+	.main {
+		margin: 0 auto;
+		padding: 1rem;
+		width: 99%;
+		min-width: 198px; /* prevents shrink that cause overflow */
+		background-color: rgb(129, 30, 30);
+	}
+
+	.main_display {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.sidebar {
+		outline: 3px solid indianred;
+		border-radius: 7px 7px 0 0;
+		padding: 0.5rem;
+		width: 100%;
+	}
+
+	.content_bar {
+		outline: 3px solid blueviolet;
+		border-radius: 0 0 7px 7px;
+		padding: 0.5rem;
+		width: 100%;
+		margin-top: 1rem;
+	}
+
+	.sidebar p {
+		outline: 3px solid black;
+		border-radius: 7px;
+
+		/* centering the text within div */
+		text-align: center;
+		height: 12.7rem;
+		line-height: 12.7rem;
+
+		/* padding-top: 10%;
+		padding-bottom: 10%; */
+	}
+
+	.content_bar p {
+		outline: 3px solid black;
+		border-radius: 7px;
+
+		/* centering the text within div */
+		text-align: center;
+		/* height: 14.7rem; */
+		/* line-height: 15rem; */
+
+		padding-top: 10%;
+		padding-bottom: 10%;
+	}
+}

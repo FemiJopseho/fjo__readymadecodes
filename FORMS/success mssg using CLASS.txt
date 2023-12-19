@@ -1,0 +1,48 @@
+// this code shows the success message when contact-form
+// in the contact-us page is filled well and submitted.
+
+// keep in mind that getElementById returns a single element, so if you // are dealing with multiple elements, you might need to use a different // method. Assuming "form__text" is a class rather than an ID, here's the // corrected code:
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    var preformText = document.getElementsByClassName("form__text");
+    var form = document.getElementById("contact-form__form");
+    var successMessage = document.getElementById("success-message");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevents the default form submission
+
+        // Your form validation logic goes here
+        var isValid = validateForm();
+
+        if (isValid) {
+            // Hide each element with class "form__text" and the form; and show the success message
+            for (var i = 0; i < preformText.length; i++) {
+                preformText[i].style.display = "none";
+            }
+            form.style.display = "none";
+            successMessage.style.display = "block";
+
+            // Hide the success message after 5 seconds (5000 milliseconds)
+            setTimeout(function () {
+                successMessage.style.display = "none";
+				
+				// Reset the form to clear input fields
+				form.reset();
+
+                // You can optionally reset each element with class "form__text" and the form here if needed
+                for (var i = 0; i < preformText.length; i++) {
+                    preformText[i].style.display = "flex";
+                }
+                form.style.display = "flex";
+            }, 5000);
+        }
+    });
+
+    // Function to perform form validation
+    function validateForm() {
+        // Add your form validation logic here
+        // For simplicity, return true for this example
+        return true;
+    }
+});

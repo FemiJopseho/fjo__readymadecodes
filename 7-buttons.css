@@ -1,0 +1,140 @@
+/** This section contains styling for the buttons used throughout the website */
+
+/** ----GENERAL style for Buttons--------- */
+
+.btn {
+	font-family: var(--ff-btn);
+	font-weight: var(--fw-semi-bold);
+	line-height: var(--lh-300);
+
+	padding-top: 0.625rem;
+	padding-bottom: 0.625rem;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+
+	border-radius: 12px;
+	cursor: pointer;
+	text-align: center;
+}
+
+/* /////////////// */
+/** ---------adding text-color & Background color----------  */
+
+/** ------Style for Primary Button----- */
+.pri-btn {
+	background-color: var(--clr-bckgrd-btn-pri-default);
+	color: var(--clr-txt-btn);
+
+	&:hover {
+		background-color: var(--clr-bckgrd-btn-pri-hover);
+	}
+
+	&:active {
+		background-color: var(--clr-bckgrd-btn-pri-pressed);
+	}
+
+	&:focus {
+		background-color: var(--clr-bckgrd-btn-pri-focus);
+	}
+
+	&:disabled {
+		background-color: var(--clr-bckgrd-btn-pri-disabled);
+	}
+}
+
+/** ------Style for Secondary Button----- */
+.sec-btn {
+	background-color: var(--clr-bckgrd-btn-sec-default);
+	color: var(--clr-txt-btn-sec);
+	border: var(--clr-bd-btn-sec-default);
+
+	&:hover {
+		background-color: var(--clr-bckgrd-btn-sec-hover);
+		color: var(--clr-txt-btn-sec);
+		border: var(--clr-bd-btn-sec-default);
+	}
+
+	&:active {
+		background-color: var(--clr-bckgrd-btn-sec-pressed);
+		color: var(--clr-txt-btn-sec);
+		border: var(--clr-bd-btn-sec-default);
+	}
+
+	&:focus {
+		background-color: var(--clr-bckgrd-btn-sec-focus);
+		color: var(--clr-txt-btn-sec);
+		border: var(--clr-bd-btn-sec-default);
+	}
+
+	&:disabled {
+		background-color: var(--clr-bckgrd-btn-sec-disabled);
+		color: var(--clr-txt-btn-sec);
+		border: var(--clr-bd-btn-sec-default);
+	}
+}
+
+/* ------Style for Success Button----- */
+.succ-btn {
+	background-color: var(--clr-bckgrd-btn-succ-default);
+	color: var(--clr-txt-btn);
+
+	&:hover {
+		background-color: var(--clr-bckgrd-btn-succ-hover);
+	}
+
+	&:active {
+		background-color: var(--clr-bckgrd-btn-succ-pressed);
+	}
+
+	&:focus {
+		background-color: var(--clr-bckgrd-btn-succ-focus);
+	}
+
+	&:disabled {
+		background-color: var(--clr-bckgrd-btn-succ-disabled);
+	}
+}
+
+/* ------Style for Warning Button----- */
+.warn-btn {
+	background-color: var(--clr-bckgrd-btn-warn-default);
+	color: var(--clr-txt-btn);
+
+	&:hover {
+		background-color: var(--clr-bckgrd-btn-warn-hover);
+	}
+
+	&:active {
+		background-color: var(--clr-bckgrd-btn-warn-pressed);
+	}
+
+	&:focus {
+		background-color: var(--clr-bckgrd-btn-warn-focus);
+	}
+
+	&:disabled {
+		background-color: var(--clr-bckgrd-btn-warn-disabled);
+	}
+}
+
+/* ------Style for Error Button----- */
+.error-btn {
+	background-color: var(--clr-bckgrd-btn-error-default);
+	color: var(--clr-txt-btn);
+
+	&:hover {
+		background-color: var(--clr-bckgrd-btn-error-hover);
+	}
+
+	&:active {
+		background-color: var(--clr-bckgrd-btn-error-pressed);
+	}
+
+	&:focus {
+		background-color: var(--clr-bckgrd-btn-error-focus);
+	}
+
+	&:disabled {
+		background-color: var(--clr-bckgrd-btn-error-disabled);
+	}
+}

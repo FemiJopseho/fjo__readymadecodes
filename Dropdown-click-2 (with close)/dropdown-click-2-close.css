@@ -1,0 +1,164 @@
+/* Follow me for more pens like this! */
+
+/* Tweak to change the look and feel */
+:root {
+	--button-background: dodgerblue;
+	--button-color: white;
+
+	--dropdown-highlight: dodgerblue;
+	--dropdown-width: 160px;
+	--dropdown-background: white;
+	--dropdown-color: black;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font: inherit;
+}
+
+/* Center the planet */
+.container {
+	/* outline: 2px solid blue; */
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	min-height: 100dvh;
+	background-color: #222229;
+}
+
+/* Boring button styles */
+a.button {
+	/* outline: 2px solid red; */
+
+	/* Frame */
+	display: inline-block;
+	padding: 20px 28px;
+	border-radius: 50px;
+	box-sizing: border-box;
+
+	/* Style */
+	border: none;
+	background: var(--button-background);
+	color: var(--button-color);
+	font-size: 24px;
+	cursor: pointer;
+}
+
+a.button:active {
+	filter: brightness(75%);
+}
+
+/* Dropdown styles for the DETAIL html Tag */
+.dropdown {
+	/* outline: 2px solid yellowgreen; */
+
+	padding: 0;
+	margin: 0 auto;
+	border: none;
+
+	position: relative;
+}
+
+/* To remove the default triangle from Summary */
+/* Diff browser has diff ways the support */
+/* for other browser "list style: none" */
+/* for safari, ::-webkit-details-marker {display:none} */
+.dropdown summary {
+	list-style: none;
+	list-style-type: none;
+}
+
+.dropdown > summary::-webkit-details-marker {
+	display: none;
+}
+
+.dropdown summary:focus {
+	outline: none;
+}
+
+.dropdown summary:focus a.button {
+	border: 2px solid white;
+}
+
+/* styling the dropdown list itself */
+.dropdown ul {
+	/* outline: 4px solid orange; */
+
+	position: absolute;
+	left: 50%;
+	z-index: 2;
+
+	margin: 20px 0 0 0;
+	padding: 20px 0;
+	width: var(--dropdown-width);
+
+	margin-left: calc((var(--dropdown-width) / 2) * -1);
+	box-sizing: border-box;
+
+	background: var(--dropdown-background);
+	background-image: linear-gradient(90deg, blue, white);
+	border-radius: 6px;
+	list-style: none;
+
+	transition: height 0.7s ease-in-out;
+}
+
+.dropdown ul li {
+	padding: 0;
+	margin: 0;
+}
+
+/* styling the links within the dropdown list */
+.dropdown ul li a:link,
+.dropdown ul li a:visited {
+	display: inline-block;
+	padding: 10px 0.8rem;
+	width: 100%;
+	box-sizing: border-box;
+
+	color: var(--dropdown-color);
+	text-decoration: none;
+}
+
+/* when you hover on the dropdown list */
+.dropdown ul li a:hover {
+	background-color: var(--dropdown-highlight);
+	color: var(--dropdown-background);
+}
+
+/* to create the Dropdown Triangle 
+that shows at the top of the dropdown list */
+.dropdown ul::before {
+	content: " ";
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: -10px;
+	left: 50%;
+	margin-left: -10px;
+	border-style: solid;
+	border-width: 0 10px 10px 10px;
+	border-color: transparent transparent var(--dropdown-background) transparent;
+}
+
+/* To Close the dropdown with outside clicks */
+.dropdown > summary::before {
+	display: none;
+}
+
+.dropdown[open] > summary::before {
+	content: " ";
+	display: block;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 1;
+}

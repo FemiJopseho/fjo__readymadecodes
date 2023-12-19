@@ -1,0 +1,66 @@
+/* /Put this at the top of all your CSS/  */
+
+/* ---------------PRESET STYLES------------- */
+/* :root {
+	font-size: 16px;
+} */
+
+/* html {
+	color-scheme: light dark;
+} */
+
+html,
+body {
+	height: 100%;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	font: inherit;
+}
+
+img,
+svg,
+video {
+	max-width: 100%;
+	display: block;
+	height: auto;
+}
+
+body {
+	line-height: 1.4;
+	background-color: white;
+}
+
+header,
+main {
+	width: min(75ch, 100 - 4rem);
+	margin-inline: auto;
+}
+
+/* ---------------GENERAL STYLES------------- */
+
+/* Hamburger menu button style */
+.hamburger-menu {
+	display: none; /* Hide by default on larger screens */
+	cursor: pointer;
+}
+
+/* Navigation links style (hidden by default) */
+.header__nav__list {
+	display: none; /* Hide by default on larger screens */
+}
+
+/* Show navigation links when the hamburger menu is clicked */
+.header__nav.show-nav .header__nav__list {
+	display: block;
+}
+
+/* You can add more styles as needed for your design */

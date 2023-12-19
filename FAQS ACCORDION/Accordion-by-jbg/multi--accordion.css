@@ -1,0 +1,339 @@
+/** GENERAL non-accordion related STYLES */
+/* /Put this at the top of all your CSS/  */
+
+/* ---------------PRESET STYLES------------- */
+
+/* html {
+	color-scheme: light dark;
+} */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font: inherit;
+
+	/* list-style: none; */
+	/* list-style-type: none; */
+	/* text-decoration: none; */
+}
+
+html {
+	height: 100%;
+
+	font-size: 100%;
+	box-sizing: inherit;
+
+	/* this  makes the parent accordion remain in screen view when clicked */
+	scroll-behavior: smooth;
+	scroll-padding: 35rem;
+}
+
+body {
+	/* outline: 4px solid gold; */
+
+	height: 100%;
+	font-family: var(--ff-primary);
+	font-size: var(--fs-800);
+	font-weight: var(--fw-regular);
+	line-height: var(--lh-100);
+	background-color: var(--clr-gen-website-bckgrd);
+
+	/* font-size: clamp(1rem, 2vw, 1.125rem); */
+	/* height: -webkit-fill-available; */
+	/* color: var(--clr-neutral-black); */
+}
+
+header,
+main {
+	width: min(75ch, 100 - 4rem);
+	margin-inline: auto;
+
+	overflow: hidden;
+}
+
+img,
+svg,
+video {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+/** ACCORDION STYLING */
+
+.accordion-type-container-1,
+.accordion-type-container-2,
+.accordion-type-container-3 {
+	width: 100%;
+	max-width: 70%;
+	margin: 0 auto;
+	padding: 2rem;
+	margin-top: 4rem;
+
+	border-radius: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+}
+
+.accordion-type-container-1 {
+	border: 2px solid magenta;
+}
+
+.accordion-type-container-2 {
+	border: 2px solid blue;
+}
+
+.accordion-type-container-3 {
+	border: 2px solid green;
+}
+
+.accordion-type-title {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 2rem;
+	font-weight: bold;
+	color: black;
+	text-align: center;
+	text-decoration-line: underline;
+	text-decoration-color: gold;
+	text-decoration-thickness: 2px;
+}
+
+/* 			 */
+/* 			 */
+/* 			 */
+
+/** PARENT ACCORDION STYLES */
+/* ///////////////// */
+/** WHEN CLOSED */
+/* //////////////// */
+.parent-accordion-item {
+	border-bottom: 6px solid white;
+}
+
+.parent-accordion button {
+	padding: 1rem 0.5rem;
+	position: relative;
+	display: block;
+	text-align: left;
+	width: 100%;
+	border: none;
+	background-color: hsl(195, 53%, 79%);
+	border-radius: 10px;
+	cursor: pointer;
+
+	/* ////////////// */
+	&:hover {
+		background-color: hsl(195, 73%, 68%);
+	}
+}
+
+.parent-accordion-title {
+	padding: 1em 1.5em 1em 0;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 1.5rem;
+	font-weight: bold;
+	line-height: 27px;
+	text-align: left;
+	color: black;
+}
+
+.parent-accordion button .icon {
+	display: inline-block;
+	position: absolute;
+	top: 18px;
+	right: 10px;
+	width: 30px;
+	height: 30px;
+	border-radius: 30px;
+	border: none;
+	background-color: rgb(172, 153, 41);
+}
+
+.parent-accordion button .icon::before {
+	display: block;
+	position: absolute;
+	content: "";
+	border: 3px solid white;
+	padding: 0.3rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+	border-left: none;
+	border-top: none;
+	transition: all 500ms ease;
+}
+
+.parent-accordion-content {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 700ms ease;
+	will-change: max-height;
+}
+
+.parent-accordion-content-text {
+	padding: 0.7rem 0.5rem 0.7rem 0.5rem;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 1rem;
+	font-weight: normal;
+	line-height: 27px;
+	text-align: left;
+	font-style: italic;
+	color: grey;
+}
+
+/* ///////////////// */
+/** WHEN OPENED */
+/* //////////////// */
+.parent-accordion button[aria-expanded="true"] {
+	border-bottom: 3px solid gold;
+}
+
+.parent-accordion button[aria-expanded="true"] .parent-accordion-title {
+	color: blue;
+}
+
+.parent-accordion button[aria-expanded="true"] .icon::before {
+	display: block;
+	position: absolute;
+	content: "";
+	border: 3px solid blue;
+	padding: 0.3rem;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+	border-right: none;
+	border-bottom: none;
+	transition: all 500ms ease;
+}
+
+.parent-accordion button[aria-expanded="true"]+.parent-accordion-content {
+	max-height: 100rem;
+	transition: max-height 3s ease;
+	will-change: max-height;
+}
+
+/* 			 */
+/* 			 */
+/* 			 */
+
+/** CHILD ACCORDION STYLES */
+/* ///////////////// */
+/** WHEN CLOSED */
+/* //////////////// */
+.child-accordion-item {
+	/* outline: 2px solid brown; */
+
+	/* border-bottom: 1px solid pink; */
+	width: 80%;
+}
+
+.child-accordion button {
+	padding: 1rem 0.5rem;
+	position: relative;
+	display: block;
+	width: 80%;
+	text-align: left;
+	border: none;
+	border-bottom: 4px solid white;
+	border-radius: 10px;
+	background-color: hsl(0, 0%, 50%);
+	cursor: pointer;
+
+	/* ////////////// */
+	&:hover {
+		background-color: hsl(0, 0%, 40%);
+	}
+}
+
+.child-accordion-title {
+	padding: 1em 1.5em 1em 0;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 1rem;
+	font-weight: bold;
+	line-height: 27px;
+	text-align: left;
+	color: white;
+}
+
+.child-accordion button .icon {
+	display: inline-block;
+	position: absolute;
+	top: 18px;
+	right: 10px;
+	width: 30px;
+	height: 30px;
+	border-radius: 30px;
+	border: none;
+	background-color: rgb(248, 129, 149);
+}
+
+.child-accordion button .icon::before {
+	display: block;
+	position: absolute;
+	content: "";
+	border: 3px solid black;
+	padding: 0.3rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+	border-left: none;
+	border-top: none;
+	transition: all 500ms ease;
+}
+
+.child-accordion-content {
+	/* outline: 2px solid red; */
+
+	width: 80%;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 700ms ease;
+	will-change: max-height;
+}
+
+.child-accordion-content-text {
+	outline: 2px solid black;
+
+	padding: 0.7rem 0.5rem 0.7rem 0.5rem;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 1rem;
+	font-weight: normal;
+	line-height: 27px;
+	text-align: left;
+	color: black;
+}
+
+/* ///////////////// */
+/** WHEN OPENED */
+/* //////////////// */
+.child-accordion button[aria-expanded="true"] {
+	border-bottom: 3px solid rgb(248, 129, 149);
+	/* border-right: 3.5px solid rgb(248, 129, 149); */
+}
+
+.child-accordion button[aria-expanded="true"] .child-accordion-title {
+	color: blue;
+}
+
+.child-accordion button[aria-expanded="true"] .icon::before {
+	display: block;
+	position: absolute;
+	content: "";
+	border: 3px solid blue;
+	padding: 0.3rem;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+	border-right: none;
+	border-bottom: none;
+	transition: all 500ms ease;
+}
+
+.child-accordion button[aria-expanded="true"]+.child-accordion-content {
+	max-height: 40rem;
+	transition: max-height 3s ease;
+	will-change: max-height;
+}

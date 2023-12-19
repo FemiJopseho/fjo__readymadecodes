@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- <meta http-equiv="refresh" content="3" /> -->
+
+		<title>Conquering Responsive Layouts + Nav</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./nav-challenge-by-joe.css" />
+	</head>
+
+	<body>
+		<header class="header_container">
+			<!-- disappearing navigation -->
+
+			<div class="button--logo width_setter">
+				<button class="nav-toggle" aria-label="open navigation">
+					<span class="hamburger"></span>
+				</button>
+				<a class="logo" href="#">
+					<img
+						src="img/logo.svg"
+						alt="conquering responsive layouts"
+					/>
+				</a>
+			</div>
+			<!-- end of disappearing navigation -->
+			<nav class="nav nav_flex width_setter">
+				<div class="nav_div logo_container">
+					<a class="link logo_link" href="#"
+						><img
+							class="logo_image"
+							src="./img/logo.svg"
+							alt="logo"
+							title="title"
+					/></a>
+				</div>
+				<div class="nav_div hom_abt_con">
+					<p><a class="link" href="#" title="home">Home</a></p>
+					<p>
+						<a class="link" href="#" title="About Us">About Us</a>
+					</p>
+					<p>
+						<a class="link" href="#" title="Contact">Contact</a>
+					</p>
+				</div>
+				<div class="nav_div sign_up_in">
+					<p>
+						<a class="link" href="#" title="Sign In">Sign In</a>
+					</p>
+					<p>
+						<a class="link sign_up_button" href="#" title="Sign Up"
+							>Sign Up</a
+						>
+					</p>
+				</div>
+			</nav>
+		</header>
+
+		<main class="main">
+			<section class="hero_section">
+				<div class="hero_mobile_view">
+					<div class="hero_section_container width_setter">
+						<h1 class="hero_title">
+							Responsive layouts don’t have to be a struggle
+						</h1>
+						<div class="hero_image_div">
+							<img
+								class="hero_image"
+								src="./img/hero-img.jpg"
+								alt="hero"
+								title="hero image"
+							/>
+						</div>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit, sed do eiusmod tempor incididunt ut labore et
+							dolore magna aliqua. Ut enim ad minim veniam.
+						</p>
+						<button class="hero_button">I Want To Learn</button>
+					</div>
+				</div>
+
+				<!-- FOR DESKTOP VIEW -->
+				<div class="hero_desktop_view">
+					<div class="hero_section_container width_setter">
+						<div class="hero_h1_p">
+							<h1 class="hero_title">
+								Responsive layouts don’t have to be a struggle
+							</h1>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit, sed do eiusmod tempor
+								incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam.
+							</p>
+						</div>
+
+						<div class="hero_image_div">
+							<img
+								class="hero_image"
+								src="./img/hero-img.jpg"
+								alt="hero"
+								title="hero image"
+							/>
+						</div>
+
+						<button class="hero_button">I Want To Learn</button>
+					</div>
+				</div>
+				<!-- END of - FOR DESKTOP VIEW -->
+			</section>
+
+			<div class="main_section_2 width_setter">
+				<section class="content_section">
+					<div class="content_section_container">
+						<h2>
+							Quality designs made custom, on demand, just for you
+						</h2>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit, sed do eiusmod tempor incididunt ut labore et
+							dolore magna aliqua. Ut enim ad minim veniam. Lorem
+							ipsum dolor sit amet, consectetur adipiscing elit,
+							sed do eiusmod tempor incididunt ut labore et dolore
+							magna aliqua. Ut enim ad minim veniam.
+							<br />
+							<br />
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit, sed do eiusmod tempor incididunt ut labore et
+							dolore magna aliqua. Ut enim ad minim veniam. Lorem
+							ipsum dolor sit amet, consectetur adipiscing elit,
+							sed do eiusmod tempor incididunt ut labore et dolore
+							magna aliqua. Ut enim ad minim veniam.
+						</p>
+					</div>
+				</section>
+
+				<aside class="aside_section">
+					<div class="aside_section_container width_setter">
+						<div>
+							<h2>Cheap</h2>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit, sed do eiusmod tempor
+								incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam.
+							</p>
+						</div>
+						<div>
+							<h2>Quick</h2>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit, sed do eiusmod tempor
+								incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam.
+							</p>
+						</div>
+						<div class="aside_section_container_div">
+							<h2>Quality</h2>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit, sed do eiusmod tempor
+								incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam.
+							</p>
+						</div>
+					</div>
+				</aside>
+			</div>
+		</main>
+
+		<script src="./main_joe.js"></script>
+	</body>
+</html>
