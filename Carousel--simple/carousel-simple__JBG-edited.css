@@ -17,7 +17,7 @@ body {
 .carousel-wrapper {
 	background-color: #c0e699;
 	width: 50vw;
-	margin: 2rem auto 1rem auto;
+	margin: 2rem auto;
 
 	/* overflow: hidden; */
 }
@@ -31,16 +31,21 @@ body {
 
 	width: 100%;
 
-	/** to prevent situation where empty space shows when previous
-   is clicked, push "carousel" to the left, so that there 
-   is always content even when previous is clicked */
-	margin-left: calc(
-		2 * (50vw / 2 - (50vw * 0.42 + 2 * 8px)) + 50vw / -2 +
-			(50vw * 0.42 + 2 * 8px) / -1
-	);
+	/** to prevent situation where empty space shows
+	when previous is clicked, push "carousel" to the
+	left outside its main box, so that there is
+	always content even when previous is clicked */
+
+	/* *do it like this based on some elaborate math */
+	/* margin-left: calc(2 * ((50vw/2) - (50vw * 0.42 + 2 * 8px)) + ((50vw/-2) + ((50vw * 0.42 + 2 * 8px)/-1))); */
+
+	/* *or just do it manually like this until you
+	have your desired result */
+	margin-left: -630px;
 
 	transition: margin-left 600ms ease-in-out;
 }
+
 .carousel.noanimate {
 	transition: margin-left 0ms ease-in-out;
 }
@@ -55,11 +60,17 @@ body {
 	margin: 1rem 0.5rem;
 	padding: 3.75rem 0;
 
-	/** This means the item:
-   won't grow (flex-grow: 0), 
-   won't shrink (flex-shrink: 0), 
-   initial size is set to 42% of the container's size. 
-   Essentially, it will be a fixed size based on the percentage of the container width. */
+	/** This means the slides:
+  won't grow (flex-grow: 0), 
+  won't shrink (flex-shrink: 0), 
+
+  initial size is set to 42% of 
+	the container's size. 
+
+  Essentially, it will be a fixed
+	size based on the percentage of
+	the container width. */
+
 	flex-grow: 0;
 	flex-shrink: 0;
 	flex-basis: 42%;
