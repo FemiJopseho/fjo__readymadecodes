@@ -5,7 +5,7 @@
 const swiper = new Swiper(".swiperCarousel", {
 	slidesPerView: 3,
 	centeredSlides: true,
-	spaceBetween: 10,
+	spaceBetween: 15, //space btw each -swiper-slide
 	keyboard: {
 		enabled: true,
 	},
