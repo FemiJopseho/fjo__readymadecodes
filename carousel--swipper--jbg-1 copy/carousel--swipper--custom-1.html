@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- *-----------------FONTS (loaded for a start)-------------------- -->
+		<style type="text/css">
+			/* hammersmith-one-regular - latin */
+			@font-face {
+				font-display: swap;
+				/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+				font-family: "Hammersmith One";
+				font-style: normal;
+				font-weight: 400;
+				src: local("Hammersmith One"),
+					url("../utilities/fonts/hammersmith-one-v17-latin-regular.woff2")
+						format("woff2"),
+					/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+						url("../utilities/fonts/hammersmith-one-v17-latin-regular.ttf")
+						format("truetype");
+				/* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+			}
+
+			/* poppins-regular - latin */
+			@font-face {
+				font-display: swap;
+				/* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+				font-family: "Poppins";
+				font-style: normal;
+				font-weight: 400;
+				src: local("Poppins"),
+					url("../utilities/fonts/poppins-v20-latin-regular.woff2")
+						format("woff2"),
+					/* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+						url("../utilities/fonts/poppins-v20-latin-regular.ttf")
+						format("truetype");
+				/* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+			}
+		</style>
+
+		<!-- *-----------CSS RESET-------------- -->
+		<link rel="stylesheet" href="../normalize.css" />
+
+		<!-- *-----------CSS PRESET-------------- -->
+		<link rel="stylesheet" href="../0-femijosepho__css-preset-styles.css" />
+
+		<!-- *-----------CSS STYLES-------------- -->
+		<link rel="stylesheet" href="./carousel--swipper--custom-1.css" />
+
+		<!-- SWIPER -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+		<!-- End of SWIPER -->
+
+		<title>Carousel Swiper -- custom-1</title>
+	</head>
+
+	<body>
+		<div class="testimonial__carousel__section">
+			<div class="testimonial__carousel__container">
+				<div class="swiper swiperCarousel">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="swiper-card">
+								<div class="client__quote__container">
+									<svg
+										class="client__quote-icon"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 48 48"
+									>
+										<path
+											d="M 16.482422 8.9921875 A 1.50015 1.50015 0 0 0 15.943359 9.1074219 C 15.943359 9.1074219 13.068414 10.279429 10.357422 13.464844 C 7.6464301 16.650259 5 21.927419 5 30 A 1.50015 1.50015 0 0 0 5.015625 30.21875 A 8.5 8.5 0 0 0 13.5 39 A 8.5 8.5 0 0 0 13.5 22 A 8.5 8.5 0 0 0 8.7089844 23.480469 C 9.5777265 19.777157 11.122152 17.196657 12.642578 15.410156 C 14.931586 12.720571 17.056641 11.892578 17.056641 11.892578 A 1.50015 1.50015 0 0 0 16.482422 8.9921875 z M 37.482422 8.9921875 A 1.50015 1.50015 0 0 0 36.943359 9.1074219 C 36.943359 9.1074219 34.068414 10.279429 31.357422 13.464844 C 28.64643 16.650259 26 21.927419 26 30 A 1.50015 1.50015 0 0 0 26.015625 30.21875 A 8.5 8.5 0 0 0 34.5 39 A 8.5 8.5 0 0 0 34.5 22 A 8.5 8.5 0 0 0 29.708984 23.480469 C 30.577727 19.777157 32.122152 17.196657 33.642578 15.410156 C 35.931586 12.720571 38.056641 11.892578 38.056641 11.892578 A 1.50015 1.50015 0 0 0 37.482422 8.9921875 z"
+										/>
+									</svg>
+
+									<p class="client__quote">
+										I must admit, as a software developer, I was skeptical about
+										the MindSync Neural Interface. But once I saw how it could
+										transform not just the way I work but also how I engage with
+										the world, I was sold.
+									</p>
+								</div>
+
+								<div class="client__profile__container">
+									<img
+										class="client__avatar"
+										src="https://i.pravatar.cc/200?img=31"
+									/>
+
+									<div class="client__name-title__container">
+										<h1 class="client__review__name">Amy Liu</h1>
+										<h2 class="client__title">Sr. Technology Analyst</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="swiper-card">
+								<div class="client__quote__container">
+									<svg
+										class="client__quote-icon"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 48 48"
+									>
+										<path
+											d="M 16.482422 8.9921875 A 1.50015 1.50015 0 0 0 15.943359 9.1074219 C 15.943359 9.1074219 13.068414 10.279429 10.357422 13.464844 C 7.6464301 16.650259 5 21.927419 5 30 A 1.50015 1.50015 0 0 0 5.015625 30.21875 A 8.5 8.5 0 0 0 13.5 39 A 8.5 8.5 0 0 0 13.5 22 A 8.5 8.5 0 0 0 8.7089844 23.480469 C 9.5777265 19.777157 11.122152 17.196657 12.642578 15.410156 C 14.931586 12.720571 17.056641 11.892578 17.056641 11.892578 A 1.50015 1.50015 0 0 0 16.482422 8.9921875 z M 37.482422 8.9921875 A 1.50015 1.50015 0 0 0 36.943359 9.1074219 C 36.943359 9.1074219 34.068414 10.279429 31.357422 13.464844 C 28.64643 16.650259 26 21.927419 26 30 A 1.50015 1.50015 0 0 0 26.015625 30.21875 A 8.5 8.5 0 0 0 34.5 39 A 8.5 8.5 0 0 0 34.5 22 A 8.5 8.5 0 0 0 29.708984 23.480469 C 30.577727 19.777157 32.122152 17.196657 33.642578 15.410156 C 35.931586 12.720571 38.056641 11.892578 38.056641 11.892578 A 1.50015 1.50015 0 0 0 37.482422 8.9921875 z"
+										/>
+									</svg>
+
+									<p class="client__quote">
+										I must admit, as a software developer, I was skeptical about
+										the MindSync Neural Interface. But once I saw how it could
+										transform not just the way I work but also how I engage with
+										the world, I was sold.
+									</p>
+								</div>
+
+								<div class="client__profile__container">
+									<img
+										class="client__avatar"
+										src="https://i.pravatar.cc/200?img=26"
+									/>
+
+									<div class="client__name-title__container">
+										<h1 class="client__review__name">Amy Liu</h1>
+										<h2 class="client__title">Sr. Technology Analyst</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="swiper-card">
+								<div class="client__quote__container">
+									<svg
+										class="client__quote-icon"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 48 48"
+									>
+										<path
+											d="M 16.482422 8.9921875 A 1.50015 1.50015 0 0 0 15.943359 9.1074219 C 15.943359 9.1074219 13.068414 10.279429 10.357422 13.464844 C 7.6464301 16.650259 5 21.927419 5 30 A 1.50015 1.50015 0 0 0 5.015625 30.21875 A 8.5 8.5 0 0 0 13.5 39 A 8.5 8.5 0 0 0 13.5 22 A 8.5 8.5 0 0 0 8.7089844 23.480469 C 9.5777265 19.777157 11.122152 17.196657 12.642578 15.410156 C 14.931586 12.720571 17.056641 11.892578 17.056641 11.892578 A 1.50015 1.50015 0 0 0 16.482422 8.9921875 z M 37.482422 8.9921875 A 1.50015 1.50015 0 0 0 36.943359 9.1074219 C 36.943359 9.1074219 34.068414 10.279429 31.357422 13.464844 C 28.64643 16.650259 26 21.927419 26 30 A 1.50015 1.50015 0 0 0 26.015625 30.21875 A 8.5 8.5 0 0 0 34.5 39 A 8.5 8.5 0 0 0 34.5 22 A 8.5 8.5 0 0 0 29.708984 23.480469 C 30.577727 19.777157 32.122152 17.196657 33.642578 15.410156 C 35.931586 12.720571 38.056641 11.892578 38.056641 11.892578 A 1.50015 1.50015 0 0 0 37.482422 8.9921875 z"
+										/>
+									</svg>
+
+									<p class="client__quote">
+										I must admit, as a software developer, I was skeptical about
+										the MindSync Neural Interface. But once I saw how it could
+										transform not just the way I work but also how I engage with
+										the world, I was sold.
+									</p>
+								</div>
+
+								<div class="client__profile__container">
+									<img
+										class="client__avatar"
+										src="https://i.pravatar.cc/200?img=69"
+									/>
+
+									<div class="client__name-title__container">
+										<h1 class="client__review__name">Amy Liu</h1>
+										<h2 class="client__title">Sr. Technology Analyst</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="swiper-card">
+								<div class="client__quote__container">
+									<svg
+										class="client__quote-icon"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 48 48"
+									>
+										<path
+											d="M 16.482422 8.9921875 A 1.50015 1.50015 0 0 0 15.943359 9.1074219 C 15.943359 9.1074219 13.068414 10.279429 10.357422 13.464844 C 7.6464301 16.650259 5 21.927419 5 30 A 1.50015 1.50015 0 0 0 5.015625 30.21875 A 8.5 8.5 0 0 0 13.5 39 A 8.5 8.5 0 0 0 13.5 22 A 8.5 8.5 0 0 0 8.7089844 23.480469 C 9.5777265 19.777157 11.122152 17.196657 12.642578 15.410156 C 14.931586 12.720571 17.056641 11.892578 17.056641 11.892578 A 1.50015 1.50015 0 0 0 16.482422 8.9921875 z M 37.482422 8.9921875 A 1.50015 1.50015 0 0 0 36.943359 9.1074219 C 36.943359 9.1074219 34.068414 10.279429 31.357422 13.464844 C 28.64643 16.650259 26 21.927419 26 30 A 1.50015 1.50015 0 0 0 26.015625 30.21875 A 8.5 8.5 0 0 0 34.5 39 A 8.5 8.5 0 0 0 34.5 22 A 8.5 8.5 0 0 0 29.708984 23.480469 C 30.577727 19.777157 32.122152 17.196657 33.642578 15.410156 C 35.931586 12.720571 38.056641 11.892578 38.056641 11.892578 A 1.50015 1.50015 0 0 0 37.482422 8.9921875 z"
+										/>
+									</svg>
+
+									<p class="client__quote">
+										I must admit, as a software developer, I was skeptical about
+										the MindSync Neural Interface. But once I saw how it could
+										transform not just the way I work but also how I engage with
+										the world, I was sold.
+									</p>
+								</div>
+
+								<div class="client__profile__container">
+									<img
+										class="client__avatar"
+										src="https://i.pravatar.cc/200?img=59"
+									/>
+
+									<div class="client__name-title__container">
+										<h1 class="client__review__name">Amy Liu</h1>
+										<h2 class="client__title">Sr. Technology Analyst</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="swiper-card">
+								<div class="client__quote__container">
+									<svg
+										class="client__quote-icon"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 48 48"
+									>
+										<path
+											d="M 16.482422 8.9921875 A 1.50015 1.50015 0 0 0 15.943359 9.1074219 C 15.943359 9.1074219 13.068414 10.279429 10.357422 13.464844 C 7.6464301 16.650259 5 21.927419 5 30 A 1.50015 1.50015 0 0 0 5.015625 30.21875 A 8.5 8.5 0 0 0 13.5 39 A 8.5 8.5 0 0 0 13.5 22 A 8.5 8.5 0 0 0 8.7089844 23.480469 C 9.5777265 19.777157 11.122152 17.196657 12.642578 15.410156 C 14.931586 12.720571 17.056641 11.892578 17.056641 11.892578 A 1.50015 1.50015 0 0 0 16.482422 8.9921875 z M 37.482422 8.9921875 A 1.50015 1.50015 0 0 0 36.943359 9.1074219 C 36.943359 9.1074219 34.068414 10.279429 31.357422 13.464844 C 28.64643 16.650259 26 21.927419 26 30 A 1.50015 1.50015 0 0 0 26.015625 30.21875 A 8.5 8.5 0 0 0 34.5 39 A 8.5 8.5 0 0 0 34.5 22 A 8.5 8.5 0 0 0 29.708984 23.480469 C 30.577727 19.777157 32.122152 17.196657 33.642578 15.410156 C 35.931586 12.720571 38.056641 11.892578 38.056641 11.892578 A 1.50015 1.50015 0 0 0 37.482422 8.9921875 z"
+										/>
+									</svg>
+
+									<p class="client__quote">
+										I must admit, as a software developer, I was skeptical about
+										the MindSync Neural Interface. But once I saw how it could
+										transform not just the way I work but also how I engage with
+										the world, I was sold.
+									</p>
+								</div>
+
+								<div class="client__profile__container">
+									<img
+										class="client__avatar"
+										src="https://i.pravatar.cc/200?img=49"
+									/>
+
+									<div class="client__name-title__container">
+										<h1 class="client__review__name">Amy Liu</h1>
+										<h2 class="client__title">Sr. Technology Analyst</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="swiper-card">
+								<div class="client__quote__container">
+									<svg
+										class="client__quote-icon"
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 48 48"
+									>
+										<path
+											d="M 16.482422 8.9921875 A 1.50015 1.50015 0 0 0 15.943359 9.1074219 C 15.943359 9.1074219 13.068414 10.279429 10.357422 13.464844 C 7.6464301 16.650259 5 21.927419 5 30 A 1.50015 1.50015 0 0 0 5.015625 30.21875 A 8.5 8.5 0 0 0 13.5 39 A 8.5 8.5 0 0 0 13.5 22 A 8.5 8.5 0 0 0 8.7089844 23.480469 C 9.5777265 19.777157 11.122152 17.196657 12.642578 15.410156 C 14.931586 12.720571 17.056641 11.892578 17.056641 11.892578 A 1.50015 1.50015 0 0 0 16.482422 8.9921875 z M 37.482422 8.9921875 A 1.50015 1.50015 0 0 0 36.943359 9.1074219 C 36.943359 9.1074219 34.068414 10.279429 31.357422 13.464844 C 28.64643 16.650259 26 21.927419 26 30 A 1.50015 1.50015 0 0 0 26.015625 30.21875 A 8.5 8.5 0 0 0 34.5 39 A 8.5 8.5 0 0 0 34.5 22 A 8.5 8.5 0 0 0 29.708984 23.480469 C 30.577727 19.777157 32.122152 17.196657 33.642578 15.410156 C 35.931586 12.720571 38.056641 11.892578 38.056641 11.892578 A 1.50015 1.50015 0 0 0 37.482422 8.9921875 z"
+										/>
+									</svg>
+
+									<p class="client__quote">
+										I must admit, as a software developer, I was skeptical about
+										the MindSync Neural Interface. But once I saw how it could
+										transform not just the way I work but also how I engage with
+										the world, I was sold.
+									</p>
+								</div>
+
+								<div class="client__profile__container">
+									<img
+										class="client__avatar"
+										src="https://i.pravatar.cc/200?img=68"
+									/>
+
+									<div class="client__name-title__container">
+										<h1 class="client__review__name">Amy Liu</h1>
+										<h2 class="client__title">Sr. Technology Analyst</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- swiper controls -->
+					<div class="swiper-button-next swiper__scroll"></div>
+					<div class="swiper-button-prev swiper__scroll"></div>
+
+					<div class="pagination__container">
+						<!-- swiper pagination -->
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+
+			<script src="./carousel--swipper--custom-1.js"></script>
+		</div>
+	</body>
+</html>

@@ -73,7 +73,7 @@ body {
 }
 
 .card {
-  /* outline: 2px solid blue; */
+  outline: 2px solid blue;
 
   background-color: #f9fafe;
   opacity: 0.5;
@@ -155,6 +155,11 @@ body {
   color: #73808c;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !;
+}
+
 .swiper-button-next:focus,
 .swiper-button-prev:focus {
   outline: none;
@@ -186,8 +191,13 @@ body {
     /* outline: 2px solid blue; */
 
     /* will change with screen size */
-    max-width: 550px;
+    min-width: 115px;
+    max-width: 600px;
     margin: 0 auto;
+
+    min-height: 200px;
+    max-height: 250px;
+
     border-radius: 10px;
     padding-top: 1.5rem;
     padding-bottom: 0.6rem;
@@ -329,7 +339,11 @@ body {
     /* outline: 2px solid blue; */
 
     /* will change with screen size */
-    max-width: 550px;
+    min-width: 30dvw;
+    max-width: 500px;
+    min-height: 200px;
+    max-height: 250px;
+
     margin: 0 auto;
     border-radius: 10px;
     padding-top: 2.5rem;
@@ -462,10 +476,9 @@ body {
 /*        */
 
 /* *for media with height <= 400px */
-@media (max-height: 40px) {
+@media (max-height: 400px) {
   .avatar {
     width: 100px;
-    height: 100px;
     transform: translate(-50px, -50px);
   }
 

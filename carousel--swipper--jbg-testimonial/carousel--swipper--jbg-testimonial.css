@@ -38,7 +38,7 @@ body {
 }
 
 .card {
-  /* outline: 2px solid blue; */
+  outline: 2px solid blue;
 
   background-color: #f9fafe;
   width: 550px;
@@ -128,6 +128,11 @@ body {
   color: #73808c;
   margin: 0;
 }
+
+/* .swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+} */
 
 .swiper-button-next:focus,
 .swiper-button-prev:focus {
