@@ -1,0 +1,61 @@
+body {
+  outline: 4px solid black;
+
+  background-color: skyblue;
+  width: 100%;
+}
+
+.test-container {
+  outline: 4px solid blue;
+
+  width: 100%;
+  margin: 0 auto;
+}
+
+p {
+  text-align: center;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: black;
+}
+
+.picture-0 {
+  outline: 2px solid brown;
+}
+
+.picture-0-img {
+  outline: 2px solid burlywood;
+}
+
+.picture-1 {
+  outline: 2px solid red;
+}
+
+.picture-1-img {
+  outline: 2px solid pink;
+}
+
+.picture-2 {
+  outline: 2px solid green;
+}
+
+.picture-2-img {
+  outline: 2px solid greenyellow;
+}
+
+.img-0 {
+  outline: 2px solid lightseagreen;
+}
+
+.img-1 {
+  outline: 2px solid magenta;
+}
+
+.img-2 {
+  outline: 2px solid maroon;
+}
+
+.img-3 {
+  outline: 2px solid gray;
+}

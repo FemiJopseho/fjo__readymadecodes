@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- <meta http-equiv="refresh" content="3" /> -->
+
+		<link rel="stylesheet" href="../../0-femijosepho__css-preset-styles.css" />
+		<link rel="stylesheet" href="./image--img-picture-tag.css" />
+		<title>Using Img Picture Tags</title>
+	</head>
+
+	<body>
+		<div class="test-container">
+			<!-- *PICTURE TAGS -->
+			<!-- PICTURE TAG (focus on width) USE THIS for best picture speed-->
+			<p>
+				<b>PICTURE TAG</b> (focus on width) <b>USE THIS</b> for PICTURE if you
+				want to focus on with and no attention to resolution
+			</p>
+
+			<picture class="picture-0">
+				<source
+					type="image/webp"
+					media="(max-width: 500px)"
+					srcset="../../test--images/image-label__320-x-568.webp"
+				/>
+
+				<source
+					type="image/webp"
+					media="(max-width: 800px)"
+					srcset="../../test--images/image-label__854-x-480.webp"
+				/>
+
+				<source
+					type="image/webp"
+					media="(max-width: 1200px)"
+					srcset="../../test--images/image-label__1366-x-768.webp"
+				/>
+
+				<source
+					type="image/webp"
+					srcset="../../test--images/image-label__1920-x-1080.webp"
+				/>
+
+				<!-- fallback -->
+				<img
+					class="picture-0-img"
+					sizes="(max-width: 500px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw, 1440px"
+					srcset="
+						../../test--images/image-label__320-x-568.jpg    500w,
+						../../test--images/image-label__854-x-480.jpg    800w,
+						../../test--images/image-label__1366-x-768.jpg  1200w,
+						../../test--images/image-label__1920-x-1080.jpg 1440w
+					"
+					src="../../test--images/image-label.jpg"
+					loading="lazy"
+					decoding="async"
+					fetchpriority="high"
+				/>
+			</picture>
+
+			<!-- PICTURE TAG (focus on width & resolution) USE THIS-->
+			<p>
+				<b>PICTURE TAG</b> (focus on width) <b>USE THIS</b> ONE for PICTURE if
+				you want to fully focus on width and fully on resolution
+			</p>
+
+			<picture class="fund-header__logo__pic">
+				<source
+					class="phone-small"
+					type="image/webp"
+					media="(max-width: 350px)"
+					srcset="
+						../../../images/QG_LOGO_Big-horizontal-Phone-small-350-76.webp 1x,
+						../../../images/QG_LOGO_Big-horizontal-Phone-small-350-76.webp 2x,
+						../../../images/QG_LOGO_Big-horizontal-Phone-small-350-76.webp 3x,
+						../../../images/QG_LOGO_Big-horizontal-Phone-small-350-76.webp 4x
+					"
+				/>
+
+				<source
+					class="phone-large"
+					type="image/webp"
+					media="(max-width: 500px)"
+					srcset="
+						../../../images/QG_LOGO_Big-horizontal-Phone-large-500-109.webp 1x,
+						../../../images/QG_LOGO_Big-horizontal-Phone-large-500-109.webp 2x,
+						../../../images/QG_LOGO_Big-horizontal-Phone-large-500-109.webp 3x,
+						../../../images/QG_LOGO_Big-horizontal-Phone-large-500-109.webp 4x
+					"
+				/>
+
+				<source
+					class="tablet-portrait"
+					type="image/webp"
+					media="(max-width: 650px)"
+					srcset="
+						../../../images/QG_LOGO_Big-horizontal-Tablet-potrait-650-141.webp 1x,
+						../../../images/QG_LOGO_Big-horizontal-Tablet-potrait-650-141.webp 2x,
+						../../../images/QG_LOGO_Big-horizontal-Tablet-potrait-650-141.webp 3x,
+						../../../images/QG_LOGO_Big-horizontal-Tablet-potrait-650-141.webp 4x
+					"
+				/>
+
+				<source
+					class="tablet-landscape"
+					type="image/webp"
+					media="(max-width: 875px)"
+					srcset="
+						../../../images/QG_LOGO_Big-horizontal-Tablet-land-875-190.webp 1x,
+						../../../images/QG_LOGO_Big-horizontal-Tablet-land-875-190.webp 2x,
+						../../../images/QG_LOGO_Big-horizontal-Tablet-land-875-190.webp 3x
+					"
+				/>
+
+				<source
+					class="laptop-small"
+					type="image/webp"
+					media="(max-width: 1000px)"
+					srcset="
+						../../../images/QG_LOGO_Big-horizontal-Laptop-small-1000-217.webp 1x,
+						../../../images/QG_LOGO_Big-horizontal-Laptop-small-1000-217.webp 2x,
+						../../../images/QG_LOGO_Big-horizontal-Laptop-small-1000-217.webp 3x
+					"
+				/>
+
+				<source
+					class="laptop-large"
+					type="image/webp"
+					srcset="
+						../../../images/QG_LOGO_Big-horizontal-Laptop-Large-1440-313.webp
+					"
+				/>
+
+				<!-- fallback -->
+				<img
+					class="fund-header__logo__pic-img"
+					sizes="(max-width: 350px) 20vw, 
+								(max-width: 500px) 20vw, 
+								(max-width: 650px) 20vw, 
+								(max-width: 875px) 20vw, 
+								(max-width: 1000px) 20vw, 
+								1440px"
+					srcset="
+						../../../images/QG__LOGO-phone-small.PNG          350w,
+						../../../images/QG__LOGO-phone-large.PNG          500w,
+						../../../images/QG__LOGO-tablet-portrait-650.PNG  650w,
+						../../../images/QG__LOGO-tablet-land-875.PNG      875w,
+						../../../images/QG__LOGO-laptop-small-1000.PNG   1000w,
+						../../../images/QG__LOGO-laptop-large-1440.PNG   1440w
+					"
+					src="../../test--images/image-label.jpg"
+					loading="lazy"
+					decoding="async"
+					fetchpriority="high"
+				/>
+			</picture>
+
+			<!-- PICTURE TAG (focus on resolution & width) -->
+			<p>
+				<b>PICTURE TAG</b> (focus on resolution & width) the fallback gives too
+				much attention to resolution and basic attention to width
+			</p>
+
+			<picture class="picture-2">
+				<source
+					type="image/webp"
+					media="(max-width: 500px)"
+					srcset="
+						../../test--images/image-label__320-x-568.webp   1x,
+						../../test--images/image-label__854-x-480.webp   2x,
+						../../test--images/image-label__1366-x-768.webp  3x,
+						../../test--images/image-label__1920-x-1080.webp 4x
+					"
+				/>
+
+				<source
+					type="image/webp"
+					media="(max-width: 800px)"
+					srcset="
+						../../test--images/image-label__854-x-480.webp   1x,
+						../../test--images/image-label__1366-x-768.webp  2x,
+						../../test--images/image-label__1920-x-1080.webp 3x
+					"
+				/>
+
+				<source
+					type="image/webp"
+					media="(max-width: 1200px)"
+					srcset="
+						../../test--images/image-label__1366-x-768.webp  1x,
+						../../test--images/image-label__1920-x-1080.webp 2x
+					"
+				/>
+
+				<source
+					type="image/webp"
+					srcset="../../test--images/image-label__1920-x-1080.webp"
+				/>
+
+				<!-- fallback -->
+				<img
+					class="picture-2-img"
+					srcset="
+						../../test--images/image-label__854-x-480.jpg   2x,
+						../../test--images/image-label__1366-x-768.jpg  3x,
+						../../test--images/image-label__1920-x-1080.jpg 4x
+					"
+					src="../../test--images/image-label.jpg"
+				/>
+			</picture>
+
+			<!-- *IMG TAGS -->
+
+			<!-- IMG TAG (focus on Image-Width & device-width) USE THIS for best img speed-->
+			<p>
+				<b>IMG TAG</b> (focus on Image-Width and Device-Width, & auto on
+				resolution) <b>USE THIS</b> ONE for IMG if you want to let the system
+				focus on width and auto decide what to display based on resolution
+			</p>
+
+			<img
+				class="img-0"
+				sizes="(max-width: 500px) 100vw, (max-width: 800px) 100vw, (max-width: 1200px) 100vw, 1440px"
+				srcset="
+					../../test--images/image-label__320-x-568.jpg    500w,
+					../../test--images/image-label__854-x-480.jpg    800w,
+					../../test--images/image-label__1366-x-768.jpg  1200w,
+					../../test--images/image-label__1920-x-1080.jpg 1440w
+				"
+				src="../../test--images/image-label.jpg"
+				loading="lazy"
+				decoding="async"
+				fetchpriority="high"
+			/>
+
+			<!-- IMG TAG (focus on width) USE THIS-->
+			<p>
+				<b>IMG TAG</b> (focus on Device-Width, & auto on resolution)
+				<b>USE THIS</b> ONE for IMG if you want to let the system focus on
+				device-width and auto decide what to display based on resolution
+			</p>
+
+			<img
+				class="img-1"
+				srcset="
+					../../test--images/image-label__320-x-568.jpg    500w,
+					../../test--images/image-label__854-x-480.jpg    800w,
+					../../test--images/image-label__1366-x-768.jpg  1200w,
+					../../test--images/image-label__1920-x-1080.jpg 1440w
+				"
+				src="../../test--images/image-label.jpg"
+			/>
+
+			<!-- IMG TAG (focus on resolution with size fixed) -->
+			<p><b>IMG TAG</b> (focus on resolution with size fixed)</p>
+
+			<img
+				class="img-2"
+				width="80%"
+				height="500"
+				srcset="
+					../../test--images/image-label__854-x-480.jpg   2x,
+					../../test--images/image-label__1366-x-768.jpg  3x,
+					../../test--images/image-label__1920-x-1080.jpg 4x
+				"
+				src="../../test--images/image-label__320-x-568.jpg"
+			/>
+
+			<!-- IMG TAG (focus on resolution no fixed Size) -->
+			<p><b>IMG TAG</b> (focus on resolution no fixed Size)</p>
+
+			<img
+				class="img-3"
+				srcset="
+					../../test--images/image-label__854-x-480.jpg   2x,
+					../../test--images/image-label__1366-x-768.jpg  3x,
+					../../test--images/image-label__1920-x-1080.jpg 4x
+				"
+				src="../../test--images/image-label.jpg"
+			/>
+		</div>
+	</body>
+</html>
